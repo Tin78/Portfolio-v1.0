@@ -113,6 +113,51 @@ main {
   }
 }
 
+// My Work/Projects
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      //opacity: 0.5;
+      transform: scale(1.03);
+      border-color: $secondary-color;
+      @include easeInOut;
+    }
+  }
+}
+
+// Button Styles
+.btn {
+  display: block; // so that they're on their own line and they go all the way across
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    transform: scale(1.03);
+    //@include easeInOut;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
